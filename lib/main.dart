@@ -16,7 +16,7 @@ class _App extends StatelessWidget {
         fontFamily: 'NotoSans'
       ),
       debugShowCheckedModeBanner: false,
-      home: RootTab()
+      home: SplashScreen()
     ,
     );
   }

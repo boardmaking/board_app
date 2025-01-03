@@ -44,6 +44,7 @@ class _RootTabState extends State<RootTab> with SingleTickerProviderStateMixin{
           onTap: (int index) {
             controller.animateTo(index);
           },
+          currentIndex: index,
           items: [
             BottomNavigationBarItem(
                 icon: Icon(
@@ -64,6 +65,7 @@ class _RootTabState extends State<RootTab> with SingleTickerProviderStateMixin{
           ],
         ),
       child: TabBarView(
+        physics: NeverScrollableScrollPhysics(),
         controller: controller,
         children: [
           Center(child: Text('게시판')),
